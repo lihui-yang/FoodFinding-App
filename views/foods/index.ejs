@@ -1,0 +1,30 @@
+<%- include("../partials/header") %>
+
+<div class="container">
+    <header class="jumbotron">
+        <div class="container">
+            <h1>Welcome to FoodFinding!</h1>
+            <p>
+                <a class = "btn btn-primary btn-lg add_button" href="/foods/new">Add a new Recommend</a>
+            </p>
+        </div>
+    </header>
+
+    <div class="row">
+        <% foods.forEach(function(food){ %>
+            <div class="col-md-4 col-sm-6">
+                <div class="card  show_page" >
+                    <div class="card-body">
+                        <img src="<%= food.image%>" class="card-img-top" alt="...">
+                        <p class="card-title"> <h3><%= food.name %> </h3></p>
+                        <p>
+                            <a href="/foods/<%= food._id %>" >More Info</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+         <% }); %>
+    </div>
+</div>
+
+<%- include("../partials/footer") %>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <tittle></tittle>
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <link rel = "stylesheet" href="/stylesheets/main.css">
+    </head>
+    <body>
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="/foods">FoodFinding</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse  justify-content-end" id="navbarNavAltMarkup">
+              <div class="navbar-nav navbar-right">
+                <!-- <a class="nav-item nav-link active" href="/foods">Home <span class="sr-only">(current)</span></a> -->
+                <% if(!currentUser){ %>
+                  <a class="nav-item nav-link" href="/login">Login</a>
+                  <a class="nav-item nav-link" href="register">Sign Up</a>
+                
+                <% }else{ %>
+                  <a class="nav-item nav-link" href="">Hello <%= currentUser.username%></a>
+                  <a class="nav-item nav-link" href="/logout">Log Out</a>
+               <%  } %>
+              </div>
+            </div>
+          </nav>
+          <script src=https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/js/bootstrap.min.js></script>
